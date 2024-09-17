@@ -10,9 +10,11 @@ import ShowProposal from './pages/ShowProposal';
 import Footer from "./components/Footer";
 import Addjob from "./pages/Addjob";
 import Profile from "./pages/Profile";
+import JobDetailsForApply from "./pages/JobDetailsForApply";
 
 import './App.css'
 import { useState, useEffect } from "react";
+import ApplyPopup from "./components/ApplyPopup";
 
 
 function App() {
@@ -86,6 +88,9 @@ function App() {
           <Route path="add-job" element={<Addjob handleRedirctuinUrl={handleRedirctuinUrl} token={user.token} />} />
           <Route path="showProposal" element={<ShowProposal />} />
           <Route path="profile" element={<Profile user={user} />}/>
+          <Route path="job-details-for-apply" element={<JobDetailsForApply />} />
+          <Route path="aplly-popup" element={<ApplyPopup />} />
+
           <Route path="*" element={<NotFound redirctuinUrl={redirctuinUrl}/>} />
         </Routes>
         <Footer />
